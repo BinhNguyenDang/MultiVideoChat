@@ -17,8 +17,27 @@ if(!roomId){
     roomId = 'main'
 }
 
-let localTrack = []
+let localTracks = []
 let remoteUsers = {}
 
-//room.html?room=234
+let joinRoomInit = async () => {
+    client = AgoraRTC.createClient({mode:'rtc', codec:'vp8'})
+    await client.join(APP_ID, roomId, token, uid)
+    joinStream()
+}
+
+let joinStream = async () => {
+    localTracks = await AgoraRTC.createMicrophoneAndCameraTracks({}, {encoderConfig:{
+        width:{min:640, ideal:1920, max:1920},
+        height:{min:480, ideal:1080, max:1080}
+    }})
+    let player = `<div class="video__container" id="user-container-${uid}">
+                        <div class="video-player" id="user-${uid}"></div>
+                    </div>`
+    document.getElementById('streams__container').insertAdjacentHTML('beforeend', player) 
+
+    localTracks[1].play(`user-${uid}`)
+}
+
+joinRoomInit()
 
