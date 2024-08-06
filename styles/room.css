@@ -175,8 +175,20 @@
 }
 
 #stream__box{
+  display: none;
   background-color: #3f434a;
   height: 60vh;
+}
+
+#stream__box .video__container{
+  border: 2px solid #000;
+  border-radius: 0;
+  height: 100%!important;
+  width: 100%!important;
+}
+
+#stream__box video{
+  border-radius: 0;
 }
 
 #streams__container{
