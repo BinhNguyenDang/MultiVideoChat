@@ -1,11 +1,11 @@
-let messagesContainer = document.getElementById('messages');
-messagesContainer.scrollTop = messagesContainer.scrollHeight;
+// let messagesContainer = document.getElementById('messages');
+// messagesContainer.scrollTop = messagesContainer.scrollHeight;
 
 const memberContainer = document.getElementById('members__container');
 const memberButton = document.getElementById('members__button');
 
-const chatContainer = document.getElementById('messages__container');
-const chatButton = document.getElementById('chat__button');
+// const chatContainer = document.getElementById('messages__container');
+// const chatButton = document.getElementById('chat__button');
 
 let activeMemberContainer = false;
 
@@ -19,17 +19,17 @@ memberButton.addEventListener('click', () => {
   activeMemberContainer = !activeMemberContainer;
 });
 
-let activeChatContainer = false;
+// let activeChatContainer = false;
 
-chatButton.addEventListener('click', () => {
-  if (activeChatContainer) {
-    chatContainer.style.display = 'none';
-  } else {
-    chatContainer.style.display = 'block';
-  }
+// chatButton.addEventListener('click', () => {
+//   if (activeChatContainer) {
+//     chatContainer.style.display = 'none';
+//   } else {
+//     chatContainer.style.display = 'block';
+//   }
 
-  activeChatContainer = !activeChatContainer;
-});
+//   activeChatContainer = !activeChatContainer;
+// });
 
 let displayFrame = document.getElementById('stream__box')
 let videoFrames = document.getElementsByClassName('video__container')

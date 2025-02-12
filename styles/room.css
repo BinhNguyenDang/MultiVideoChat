@@ -1,6 +1,6 @@
 .container {
   margin-top: 74px;
-  height: clac(100vh - 74px);
+  height: calc(100vh - 74px);
   width: 100%;
   position: relative;
 }
@@ -169,7 +169,6 @@
   width: calc(100% - 40.7rem);
   position: fixed;
   left: 15.7rem;
-  top: clac(100vh - 72px);
   overflow-y: auto;
   height: 100%;
 }

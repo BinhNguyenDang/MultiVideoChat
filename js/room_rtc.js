@@ -1,4 +1,4 @@
-const APP_ID= "" // Your Agora app id
+const APP_ID= "43def6d3cfa84de48e1f006550d75acf" // Your Agora app id
 
 let uid = sessionStorage.getItem("uid")
 if(!uid){
